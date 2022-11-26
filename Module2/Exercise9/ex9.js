@@ -2,7 +2,7 @@
 
 
 
-const numbers = [7, 10, 15, 8, 13, 18, 6];
+const numbers = [7, 10, 15, 8, 13, 18];
 
 function even(numbers) {
     const evenNumb = [];
