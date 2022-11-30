@@ -1,3 +1,5 @@
+'use strict';
+
 const ul = document.querySelector('#target');
 let items = ["First item", "Second Item", "Third Item"];
 
