@@ -1,4 +1,6 @@
 'use strict';
+
+
 const students = [
   {
     name: 'John',
@@ -13,3 +15,13 @@ const students = [
     id: '5423679',
   },
 ];
+
+
+const select = document.querySelector('#target');
+
+for (let i = 0; i < students.length; i++) {
+  const option = document.createElement('option');
+  option.value = students[i]['id'];
+  option.innerHTML = students[i]['name'];
+  select.appendChild(option);
+}
