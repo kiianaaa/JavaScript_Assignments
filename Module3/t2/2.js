@@ -8,5 +8,5 @@ for (let i = 0; i < items.length; i++) {
     ul.appendChild(li);
 }
 
-const second = document.querySelectorAll('li')[1];
-second.classList.add("my-item");
+const now = document.querySelectorAll('li')[1];
+now.classList.add("my-item");
