@@ -1,6 +1,6 @@
 'use strict';
 
-fetch('https://api.tvmaze.com/search/shows?q=society').
+fetch('https://api.tvmaze.com/search/shows?q=supernatural').
     then(response => response.json()).
     then(data => info(data));
 
@@ -20,26 +20,32 @@ function info(data) {
         const h1 = document.createElement('h1');
         h1.innerHTML = data[dat]['show']['name'];
         article.appendChild(h1);
-        const h6 = document.createElement('h6');
-        h6.innerHTML = 'Genres: ';
+        // genra as h5 element
+        const h5 = document.createElement('h6');
+        h5.innerHTML = 'Genres: ';
+        // seperator between genras
         const span = document.createElement('span');
         const genres = data[dat]['show']['genres'];
         const separetor = genres.join(' | ');
         span.textContent = separetor;
-        h6.appendChild(span);
-        article.appendChild(h6);
-        const ab = document.createElement('a');
-        article.appendChild(ab);
+        h5.appendChild(span);
+        article.appendChild(h5);
+        // show's link
+        const k = document.createElement('a');
+        article.appendChild(k);
         const attr = document.createAttribute('href');
         attr.value = data[dat]['show']['url'];
-        ab.setAttributeNode(attr);
-        const bal = document.createAttribute('target');
-        bal.value = '_blank';
-        ab.setAttributeNode(bal);
-        ab.innerHTML = data[dat]['show']['url'];
+        k.setAttributeNode(attr);
+        const kim = document.createAttribute('hadaf');
+        kim.value = '_blank';
+        k.setAttributeNode(kim);
+        k.innerHTML = data[dat]['show']['url'];
+        // poster
         const img = document.createElement('img');
         img.src = data[dat]['show']['image']['medium'];
-        img.alt = 'This is a image';
+        // text were the img doesn't show
+        img.alt = `Showe's poster`;
+        // when there is no poster pic
         img.addEventListener('error', function (event) {
             event.pic.src = 'https://via.placeholder.com/100x200?text=text+here';
             event.onerror = null;
