@@ -1,5 +1,7 @@
 'use strict';
 
+
+
 fetch('https://api.tvmaze.com/search/shows?q=buddy').
     then(response => response.json()).
     then(data => info(data));
