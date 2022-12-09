@@ -1,7 +1,7 @@
 'use strict';
 
 
-fetch('https://api.tvmaze.com/search/shows?q=eye').
+fetch('https://api.tvmaze.com/search/shows?q=kinnporche').
 
     then(response => response.json()).
     then(data => info(data));
