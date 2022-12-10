@@ -24,12 +24,14 @@ section h1 {
     /* border-top: 3px solid #365563;*/
     color: rgb(22, 22, 22);
     font-family: 'Ubuntu', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 45px;
+    cursor: context-menu;
 }
 
 section h5 {
     color: rgb(22, 22, 22);
+    cursor: context-menu;
 }
 
 section h4 {
@@ -37,11 +39,14 @@ section h4 {
     margin-bottom: 150px;
     color: rgb(22, 22, 22);
     font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    cursor: pointer;
 }
 
 section a {
     color: #a0445d;
     font-weight: 700;
+    cursor: progress;
 }
 
 section img {
