@@ -1,7 +1,6 @@
 'use strict';
 
 
-
 fetch('https://api.tvmaze.com/search/shows?q=buddy').
     then(response => response.json()).
     then(data => info(data));
@@ -23,7 +22,7 @@ function info(data) {
         h1.innerHTML = data[dat]['show']['name'];
         section.appendChild(h1);
         // genra as h5 element
-        const h5 = document.createElement('h6');
+        const h5 = document.createElement('h5');
         h5.innerHTML = 'Genres: ';
         // seperator between genras
         const span = document.createElement('span');
@@ -53,9 +52,9 @@ function info(data) {
             event.onerror = null;
         });
         section.appendChild(img);
-        const p = document.createElement('p');
-        p.innerHTML = data[dat]['show']['summary'];
-        section.appendChild(p);
+        const sum = document.createElement('h4');
+        sum.innerHTML = data[dat]['show']['summary'];
+        section.appendChild(sum);
 
     }
 }
