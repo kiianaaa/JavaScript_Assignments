@@ -1,7 +1,8 @@
 'use strict';
 
+const vared = prompt(`What keyword do you wanna search?`)
 
-fetch('https://api.tvmaze.com/search/shows?q=kinnporche').
+fetch('https://api.tvmaze.com/search/shows?q=' + vared).
 
     then(response => response.json()).
     then(data => info(data));
