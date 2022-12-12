@@ -1,6 +1,14 @@
 'use strict';
 
-const vared = prompt(`What keyword do you wanna search?`)
+
+
+var vared = prompt(`What's the name of that show you saw tiktok edites for?`)
+
+
+// error handler when prompt is null
+if (!vared) {
+    vared = `history 3`;
+}
 
 fetch('https://api.tvmaze.com/search/shows?q=' + vared).
 

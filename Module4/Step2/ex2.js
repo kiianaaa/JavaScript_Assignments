@@ -2,9 +2,19 @@
 
 
 
-fetch('https://api.tvmaze.com/search/shows?q=semantic').
+var vared = prompt(`Hit me up with your show's name, then i'll give u all the juice babe.`);
+
+    
+if (!vared) {
+    vared = `blueming`;
+}
+        
+
+fetch('https://api.tvmaze.com/search/shows?q=' + vared).
     then(response => response.json()).
     then(data => info(data));
+
+
 const p = document.getElementById('hadaf1');
 
 function info(data) {

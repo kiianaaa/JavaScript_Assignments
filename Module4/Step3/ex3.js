@@ -1,6 +1,14 @@
 'use strict';
 
-fetch('https://api.tvmaze.com/search/shows?q=supernatural').
+
+var vared = prompt(`Soo what keyword do u wanna search?`);
+
+    
+if (!vared) {
+    vared = `rich man`;
+}
+
+fetch('https://api.tvmaze.com/search/shows?q=' + vared).
     then(response => response.json()).
     then(data => info(data));
 
